@@ -67,3 +67,28 @@ div:focus {
 .tabel-page {
   padding: 36px 16px;
 }
+.tx-center  {
+  text-align: center;
+}
+.el-dialog__header .el-dialog__title, .el-message-box__header .el-message-box__title{
+  font-size: 18px;
+  font-weight: 700;
+  color: #3B86FF;
+  line-height: normal;
+}
+.btn-icon{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 10px;
+}
+.btn-icon-edit{
+ background-image: url("../assets/images/edit.svg");
+}
+.btn-icon-delete{
+  background-image: url("../assets/images/delete.svg");
+}
