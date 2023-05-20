@@ -42,6 +42,11 @@ export const constantRoutes = [
     component: () => import('@/views/404'),
     hidden: true
   },
+  {
+    path: '/view-pdf',
+    component: () => import('@/views/view-pdf/view-pdf.vue'),
+    hidden: true
+  },
 
   {
     path: '/',
