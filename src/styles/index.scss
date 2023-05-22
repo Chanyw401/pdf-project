@@ -101,6 +101,7 @@ div:focus {
   padding: 62px 72px 28px 72px;
   border-radius: 0px 0px 0px 0px;
   margin: 0 auto;
+  position: relative;
 }
 .car-header1{
   position: relative;
@@ -121,6 +122,7 @@ div:focus {
     }
   }
   .right{
+    text-align: right;
     .NO{
       font-size: 14px;
       font-weight: bold;
@@ -142,4 +144,16 @@ div:focus {
     background-size: cover;
   }
 
+}
+.footer-box{
+  position: absolute;
+  bottom: 28px;
+  width: 620px;
+  img{
+    width: 100%;
+  }
+  .footer-text{
+    width: 100%;
+    text-align: center;
+  }
 }

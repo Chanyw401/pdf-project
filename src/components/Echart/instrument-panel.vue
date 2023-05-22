@@ -3,11 +3,21 @@
     <div class="item1_content">
       <div class="left">
         <div ref="beat" class="beat"></div>
-        <div class="beat_bg"></div>
+  <!--        <div class="beat_bg">-->
+  <!--          <img src="../../assets/images/car-pdf/beat-bg-line.svg" alt="">-->
+  <!--          -->
+  <!--        </div>-->
+        <div class="beat_bg_before">
+          <img src="../../assets/images/car-pdf/beat_bg_before.svg" alt="">
+        </div>
+        <div class="beat_bg">
+          <img src="../../assets/images/car-pdf/beat-bg.svg" alt="">
+        </div>
         <div class="left_text">
           <!-- {{ data.proportion }} -->
+          21
           <span style="font-size: 14px; color: #9f6aa2; font-weight: 400"
-            >分钟</span
+            >个</span
           >
         </div>
       </div>
@@ -19,7 +29,7 @@
 import * as echarts from "echarts";
 
 export default {
-  name: "productionBeat",
+  name: "InstrumentPanel",
   props: {
     data: {
       type: Object,
@@ -146,12 +156,21 @@ export default {
   .left {
     position: relative;
     .beat {
-      left: -41px;
-      top: -80px;
-      width: 150px;
-      height: 150px;
+      left: -70px;
+      top: -120px;
+      width: 220px;
+      height: 220px;
       position: absolute;
       //background-color: pink;
+    }
+    .beat_bg_before{
+      position: absolute;
+      left: -61px;
+      width: 200px;
+      top: -67px;
+      img {
+        width: 100%;
+      }
     }
     .beat_bg {
       position: absolute;
@@ -164,12 +183,13 @@ export default {
     }
     .left_text {
       color: #362b33;
-      left: 0px;
+      left: -18px;
       font-size: 22px;
-      bottom: -31px;
+      bottom: -39px;
       position: absolute;
       font-weight: 700;
       width: 120px;
+      text-align: center;
     }
 
     img {

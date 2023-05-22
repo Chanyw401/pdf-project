@@ -9,7 +9,7 @@
 <script>
 import { mapGetters } from "vuex";
 import instrumentPanel from "@/components/Echart/instrument-panel.vue";
-import progressBar from "@/components/Echart/progress-bar.vue";
+import progressBar from "@/components/Echart/progress-bar-item.vue";
 
 export default {
   name: "Dashboard",

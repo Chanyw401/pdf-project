@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="progress-item">
-      <div class="item-text">肺部感染或疾病</div>
+      <div class="item-text">{{ data.name }}</div>
       <div class="item-content">
         <div class="progress"></div>
         <div class="partition"></div>
@@ -12,9 +12,9 @@
         <div class="progress"></div>
         <div class="partition"></div>
         <div class="progress"></div>
-        <div class="progress-bg" :style="{ width: `${a}%` }"></div>
+        <div class="progress-bg" :style="{ width: `${data.num}%`,background: color }"></div>
       </div>
-      <div>50</div>
+      <div class="item-num">{{data.num}}</div>
       <div>低风险</div>
     </div>
     <!-- <div class="progress">
@@ -33,11 +33,15 @@
 
 <script>
 export default {
-  name: "productionBeat",
+  name: "productionBeatItem",
   props: {
     data: {
       type: Object,
       default: () => {},
+    },
+    color: {
+      type: String,
+      default: "#8989A3",
     },
     progress: {
       type: Number,
@@ -65,13 +69,24 @@ export default {
 <style scoped lang="scss">
 .progress-item {
   display: flex;
-  height: 32px;
+  height: 45px;
+  align-items: center;
   .item-text {
-    width: 200px;
+    width: 150px;
     text-align: right;
+    color: #1C2431;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .item-num{
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #4779A6;
   }
   .item-content {
-    width: 535px;
+    width: 360px;
+    height: 10px;
     // background: pink;
     z-index: 3;
     display: flex;
@@ -80,19 +95,19 @@ export default {
     position: relative;
     .progress {
       width: 100px;
-      background: #e2e5ec;
+      background: rgba(226, 229, 236, 1);
       height: 100%;
     }
     .progress-bg {
       height: 100%;
-      background: pink;
+      //background: pink;
       position: absolute;
       // 加一个过度效果
       transition: .5s ease-in-out;
     }
   }
   .partition {
-    width: 5px;
+    width: 2px;
     height: 100%;
     background: #fff;
     z-index: 99;

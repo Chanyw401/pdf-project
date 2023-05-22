@@ -30,6 +30,9 @@
 
       </div>
       <el-table ref="table" :data="tableObj.list" stripe>
+
+
+
         <el-table-column
           fixed="left"
           type="selection"
@@ -297,10 +300,11 @@ export default {
             firstField = field[key];
             break;
           }
-          this.$tool.msg({
-            type: "error",
-            message: firstField[0].message,
-          });
+          this.$message.error(firstField[0].message)
+         // / this.$tool.msg({
+         //    type: "error",
+         //    message: firstField[0].message,
+         //  });
           return false;
         }
       });

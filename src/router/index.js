@@ -93,7 +93,19 @@ export const constantRoutes = [
       }
     ]
   },
-  //
+  {
+    path: '/table',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Table',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Table', icon: 'form' }
+      }
+    ]
+  },
+
   // {
   //   path: '/form',
   //   component: Layout,
