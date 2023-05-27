@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100px;">
+  <div style="margin-bottom: 50px" >
     <production-beat-item v-for="(item,index) in data" :color="colorList[index]" :data="item" :key="item.name" />
   </div>
 </template>
@@ -13,7 +13,8 @@ export default {
   props:{
     data:{
       type:Array,
-      default:()=>[{
+      default:()=>[
+        {
         name:'菌群平衡',
         num:50,
         type:1
@@ -38,7 +39,7 @@ export default {
   },
   data() {
     return {
-      colorList:['#8989A3','#ACACC1','#475276','#8989A3']
+      colorList:['#8989A3','#ACACC1','#475276','#8989A3','#8989A3','#ACACC1','#475276','#8989A3','#8989A3','#ACACC1','#475276','#8989A3']
     };
   },
 }
