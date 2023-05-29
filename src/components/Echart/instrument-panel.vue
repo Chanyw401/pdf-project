@@ -3,12 +3,11 @@
     <div class="item1_content">
       <div class="left">
         <div ref="beat" class="beat"></div>
-  <!--        <div class="beat_bg">-->
-  <!--          <img src="../../assets/images/car-pdf/beat-bg-line.svg" alt="">-->
-  <!--          -->
-  <!--        </div>-->
         <div class="beat_bg_before">
           <img src="../../assets/images/car-pdf/beat_bg_before.svg" alt="">
+        </div>
+        <div class="beat_bg_after">
+          <img src="../../assets/images/car-pdf/beat_bg_after.png" alt="">
         </div>
         <div class="beat_bg">
           <img src="../../assets/images/car-pdf/beat-bg.svg" alt="">
@@ -19,6 +18,9 @@
           <span style="font-size: 14px; color: #9f6aa2; font-weight: 400"
             >个</span
           >
+        </div>
+        <div class="left_name">
+          亚健康及营养饮食不合理
         </div>
       </div>
     </div>
@@ -148,7 +150,7 @@ export default {
 
 <style scoped lang="scss">
 .item1_content {
-  height: 150px;
+  height: 187px;
   width: 390px;
   display: flex;
   justify-content: space-around;
@@ -166,8 +168,18 @@ export default {
     .beat_bg_before{
       position: absolute;
       left: -61px;
-      width: 200px;
+      width: 204px;
       top: -67px;
+      img {
+        width: 100%;
+      }
+    }
+    .beat_bg_after{
+      position: absolute;
+      left: -35px;
+      width: 150px;
+      top: -38px;
+
       img {
         width: 100%;
       }
@@ -175,7 +187,7 @@ export default {
     .beat_bg {
       position: absolute;
       left: -20px;
-      width: 110px;
+      width: 120px;
       top: -28px;
       img {
         width: 100%;
@@ -190,6 +202,14 @@ export default {
       font-weight: 700;
       width: 120px;
       text-align: center;
+    }
+    .left_name{
+      position: absolute;
+      width: 200px;
+      bottom: -78px;
+      left: -56px;
+      text-align: center;
+      color: #6F7F9F;
     }
 
     img {

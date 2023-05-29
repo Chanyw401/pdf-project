@@ -95,17 +95,18 @@ div:focus {
 
 
 .car-box{
-  width: 764px;
-  height: 1080px;
+  width: 790px;
+  height: 1120px;
   background: #F6F6F4;
   padding: 62px 72px 28px 72px;
   border-radius: 0px 0px 0px 0px;
   margin: 0 auto;
   position: relative;
+  page-break-inside: avoid;
 }
 .car-header1{
   position: relative;
-  align-items: end;
+  align-items: flex-end;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;

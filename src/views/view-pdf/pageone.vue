@@ -1,16 +1,6 @@
 <template>
   <div>
     <div class="car-box">
-      <!--      <div class="car-header1">-->
-      <!--        <div class="left">-->
-      <!--          <div class="title">您的结果总览</div>-->
-      <!--          <div class="title-en">OVERVIEW OF YOUR RESULT</div>-->
-      <!--        </div>-->
-      <!--        <div class="right">-->
-      <!--          <div class="No">NO：BG202304172012</div>-->
-      <!--          <div class="date">报告生成：2023-04-17</div>-->
-      <!--        </div>-->
-      <!--      </div>-->
       <header-one :data="{name:'您的结果总览',nameEn:'OVERVIEW OF YOUR RESULT',No:'NO：BG202304172012',date:'报告生成：2023-04-17'}" />
       <div class="car-content1">
         <div class="left">
@@ -48,7 +38,11 @@
               </div>
             </div>
           </div>
-          <div class="right"></div>
+          <div class="right">
+            <div class="circle" ref="circle"></div>
+            <div class="cicle-bg">
+              <img src="@/assets/images/car-pdf/circle-bg.png" alt=""></div>
+          </div>
         </div>
 
       </div>
@@ -65,7 +59,6 @@
         <div class="footer-text">
           01
         </div>
-
       </div>
     </div>
 
@@ -77,6 +70,7 @@ import HeaderTow from "@/components/pdf-common/header-tow.vue";
 import HeaderOne from "@/components/pdf-common/header-one.vue";
 import InstrumentPanel from "@/components/Echart/instrument-panel.vue";
 import ProductionBeat from "@/components/common/production-beat.vue";
+import * as echarts from "echarts";
 
 export default {
   components: {ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
@@ -131,8 +125,80 @@ export default {
           ]
         }
       },
+      option : {
+
+        tooltip: {},
+
+        radar: {
+          shape: 'circle',
+          indicator: [
+            { name: '普氏菌型', max: 100},
+            { name: '拟杆菌型', max: 100},
+            { name: '胃球菌型', max: 100},
+
+          ],
+          radius: 80,
+          name:{
+            color:'rgba(111, 127, 159, 1)'
+          },
+          splitArea: {
+            areaStyle: {
+              color: 'rgba(230, 232, 238, .1)',
+              shadowBlur: 10
+            },
+            show:false
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#0095B0'
+            },
+            show:false
+          },
+          splitLine: {
+            lineStyle: {
+              color: '#333'
+            },
+            show:false
+          }
+        },
+        series: [{
+          name: '预算 vs 开销（Budget vs spending）',
+          type: 'radar',
+          symbolSize: 0,
+          areaStyle: {
+            normal: {
+              color: 'rgba(37, 74, 150, .2)',
+            },
+
+            emphasis: {
+              color: 'rgba(6, 222, 249,0.5)',
+            }
+          },
+          lineStyle: {
+            normal: {
+              color: 'rgba(37, 74, 150, 1)',
+              type: 'solid',
+              width: 2
+            },
+            emphasis: {}
+          },
+          // areaStyle: {normal: {}},
+          data : [
+            {
+              value : [100, 60, 30],
+              name : '预算分配（Allocated Budget）'
+            },
+
+          ]
+        }]
+      },
+      echart:null
     }
   },
+  mounted() {
+    this.echarts = echarts.init(this.$refs.circle);
+    this.echarts.setOption(this.option);
+  }
 }
 </script>
 
@@ -218,6 +284,7 @@ export default {
       background-size: cover;
       color: #6F7F9F;
       font-size: 18px;
+      background-size: 100% 100%;
       .item{
         margin-bottom: 20px;
         span{
@@ -227,6 +294,20 @@ export default {
     }
     .right {
       width: 50%;
+      position: relative;
+      .circle{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: -50px;
+        left: 50px;
+        z-index: 99;
+      }
+      .cicle-bg{
+        position: absolute;
+        left: 109px;
+        top: 2px;
+      }
     }
 
   }
