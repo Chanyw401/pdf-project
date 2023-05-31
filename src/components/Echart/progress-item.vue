@@ -3,18 +3,11 @@
     <div class="progress-item">
       <div class="item-text">{{ data.name }}</div>
       <div class="item-content">
-        <div class="progress"></div>
-        <div class="partition"></div>
-        <div class="progress"></div>
-        <div class="partition"></div>
-        <div class="progress"></div>
-        <div class="partition"></div>
-        <div class="progress"></div>
-        <div class="partition"></div>
-        <div class="progress"></div>
-        <div class="progress-bg" :style="{ width: `${data.num}%`,background: color }"></div>
+
+        <div class="progress-bg" :style="{ width: `${data.num}%`}">
+          <div class="popover">{{data.num}}</div>
+        </div>
       </div>
-      <div class="item-num">{{data.num}}</div>
       <div class="state-btn">低风险</div>
     </div>
 
@@ -23,7 +16,7 @@
 
 <script>
 export default {
-  name: "productionBeatItem",
+  name: "ProgressItem",
   props: {
     data: {
       type: Object,
@@ -83,6 +76,8 @@ export default {
     justify-content: space-between;
     padding: 0;
     position: relative;
+    background: #E2E5EC;
+    margin-right: 36px;
     .progress {
       width: 100px;
       background: rgba(226, 229, 236, 1);
@@ -90,10 +85,44 @@ export default {
     }
     .progress-bg {
       height: 100%;
-      //background: pink;
-      position: absolute;
+      background: #ACACC1;
       // 加一个过度效果
       transition: .5s ease-in-out;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(172deg, #1C2431 0%, #6F7F9F 100%);
+      border: 2px solid #F6F6F4;
+        border-radius: 50%;
+        top: -1px;
+        right: -3px;
+      }
+      .popover{
+        position: absolute;
+        width: 25px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background: #1C2431;
+        border-radius: 4px 4px 4px 4px;
+        top: -28px;
+        right: -9px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 300;
+        &:after{
+          position: absolute;
+          content: '';
+          width: 7px;
+          height: 5px;
+          background: #1C2431;
+          top: -28px;
+          right: -9px;
+        }
+      }
     }
   }
   .partition {

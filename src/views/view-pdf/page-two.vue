@@ -3,7 +3,8 @@
     <div class="car-box">
 
       <header-tow :data="{name:'疾病风险分析',nameEn:'DISEASE RISK ASSESSMENT'}"></header-tow>
-      <div style="height: 100px">
+      <div class="indicator-box">
+        <img src="@/assets/images/car-pdf/Indicator-one.png" alt="">
 
       </div>
 
@@ -12,15 +13,8 @@
 
       </div>
 
-      <div class="footer-box">
-        <div>
-          <img src="@/assets/images/car-pdf/footer-bg.svg" alt="">
-        </div>
-        <div class="footer-text">
-          02
-        </div>
 
-      </div>
+      <footer-box :data="'02'"/>
     </div>
 
   </div>
@@ -31,9 +25,10 @@ import HeaderTow from "@/components/pdf-common/header-tow.vue";
 import HeaderOne from "@/components/pdf-common/header-one.vue";
 import InstrumentPanel from "@/components/Echart/instrument-panel.vue";
 import ProductionBeat from "@/components/common/production-beat.vue";
+import FooterBox from "@/components/pdf-common/footer-box.vue";
 
 export default {
-  components: {ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
+  components: {FooterBox, ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
   name:'pageTwo',
   data() {
     return {

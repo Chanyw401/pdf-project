@@ -1,20 +1,38 @@
 <template>
   <div>
     <div class="car-box">
-      <header-one :data="{name:'您的结果总览',nameEn:'OVERVIEW OF YOUR RESULT',No:'NO：BG202304172012',date:'报告生成：2023-04-17'}" />
+      <header-one :data="{name:'抗生素风险分析',nameEn:'OVERVIEW OF YOUR RESULT',No:'NO：BG202304172012',date:'报告生成：2023-04-17'}" />
 
-      <div class="indicator-box" style="height: 50px;line-height: 50px" >
+      <div class="indicator-box"
+      >
         <img src="@/assets/images/car-pdf/Indicator-thre.png" alt="">
       </div>
 
-      <header-tow :data="{name:'主要营养评估',nameEn:'MAIN NUTRTIONAL ASSESSMENT'}"></header-tow>
-      <production-beat :data="listInfo3" />
+      <el-table
+        :data="tableData"
+        style="width: 100%">
+        <el-table-column
+          prop="date"
+          label="日期"
+          width="180">
+        </el-table-column>
+        <el-table-column
+          prop="name"
+          label="姓名"
+          width="180">
+        </el-table-column>
+        <el-table-column
+          prop="address"
+          label="地址">
+        </el-table-column>
+      </el-table>
 
 
-      <header-tow :data="{name:'睡眠压力及精神状态评估',nameEn:'SLEEP STRESS AND MENTAL STATE ASSSESSMENT'}"></header-tow>
-      <production-beat :data="listInfo " />
 
-      <footer-box :data="'04'"/>
+
+
+
+      <footer-box :data="'07'"/>
     </div>
 
   </div>
@@ -29,12 +47,12 @@ import FooterBox from "@/components/pdf-common/footer-box.vue";
 
 export default {
   components: {FooterBox, ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
-  name:'page4',
+  name:'page7',
   data() {
     return {
       listInfo:[
         {
-          name:'菌群平衡',
+          name:'肠道菌群血清素合成能力',
           num:50,
           type:1
         },
@@ -76,15 +94,6 @@ export default {
           num:50,
           type:1
         },
-      ],
-      listInfo2:[
-        {
-          name:'菌群平衡',
-          num:50,
-          type:1
-        },
-      ],
-      listInfo3:[
         {
           name:'菌群平衡',
           num:50,
@@ -99,7 +108,7 @@ export default {
           name:'有益菌',
           num:40,
           type:1
-        }, {
+        },  {
           name:'菌群平衡',
           num:50,
           type:1
@@ -109,7 +118,36 @@ export default {
           num:31,
           type:1
         },
-      ]
+        {
+          name:'有益菌',
+          num:40,
+          type:1
+        },
+      ],
+      list:[
+        {name:厚壁菌门Firmicutes,num:50},
+        {name:厚壁菌门Firmicutes2,num:50},
+        {name:厚壁菌门Firmicutes3,num:50},
+      ],
+      tableData: [{
+        date: '2016-05-02',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1517 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1519 弄'
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1516 弄'
+      }]
+
+
     }
   },
 }

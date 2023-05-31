@@ -1,24 +1,24 @@
 <template>
   <div style="margin-bottom: 50px" >
-    <production-beat-item v-for="(item,index) in data" :color="colorList[index]" :data="item" :key="index" />
+<progress-item v-for="(item,index) in data" :color="colorList[index]" :data="item" :key="index"    />
   </div>
 </template>
 
 <script>
-import ProductionBeatItem from "@/components/Echart/progress-bar-item.vue";
+import ProgressItem from "@/components/Echart/progress-item.vue";
 
 export default {
-  name: "productionBeat",
-  components: {ProductionBeatItem},
+  name: "ProgressBox",
+  components: {ProgressItem},
   props:{
     data:{
       type:Array,
       default:()=>[
         {
-        name:'菌群平衡',
-        num:50,
-        type:1
-      },
+          name:'菌群平衡',
+          num:50,
+          type:1
+        },
         {
           name:'菌群多样性',
           num:31,

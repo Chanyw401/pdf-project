@@ -6,6 +6,7 @@
     <page4/>
     <page5/>
     <page6/>
+    <page7/>
 <!--    <div class="car-box">-->
 <!--      <header-one :data="{name:'您的结果总览',nameEn:'OVERVIEW OF YOUR RESULT',No:'NO：BG202304172012',date:'报告生成：2023-04-17'}" />-->
 <!--      <div class="car-content1">-->
@@ -78,9 +79,11 @@ import PageThre from "@/views/view-pdf/pagethre.vue";
 import Page4 from "@/views/view-pdf/page4.vue";
 import Page5 from "@/views/view-pdf/page5.vue";
 import Page6 from "@/views/view-pdf/page6.vue";
+import Page7 from "@/views/view-pdf/page7.vue";
 
 export default {
   components: {
+    Page7,
     Page6,
     Page5, Page4, PageThre, PageTre, PageTwo, PageOne, ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
   data() {

@@ -6,3 +6,28 @@
 .tabel-page {
   padding:36px 16px;
 }
+.indicator-box{
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+.state-btn{
+  width: 66px;
+  height: 24px;
+  background: #254A96;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  &:before{
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    left: 0;
+    right: 0;
+  }
+}

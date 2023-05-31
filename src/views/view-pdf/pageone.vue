@@ -51,15 +51,7 @@
         <production-beat />
 
       </div>
-
-      <div class="footer-box">
-        <div>
-          <img src="@/assets/images/car-pdf/footer-bg.svg" alt="">
-        </div>
-        <div class="footer-text">
-          01
-        </div>
-      </div>
+  <footer-box :data="'01'"/>
     </div>
 
   </div>
@@ -71,9 +63,10 @@ import HeaderOne from "@/components/pdf-common/header-one.vue";
 import InstrumentPanel from "@/components/Echart/instrument-panel.vue";
 import ProductionBeat from "@/components/common/production-beat.vue";
 import * as echarts from "echarts";
+import FooterBox from "@/components/pdf-common/footer-box.vue";
 
 export default {
-  components: {ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
+  components: {FooterBox, ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
   name:'pageOne',
   data() {
     return {
