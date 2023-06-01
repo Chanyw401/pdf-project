@@ -139,7 +139,6 @@ export default {
     };
   },
   mounted() {
-    console.log("echarts", echarts);
     this.echarts = echarts.init(this.$refs.beat);
     this.option.series[0].data[0].value = 50;
     // this.option.series[2].data[0].value = 50;

@@ -1,69 +1,69 @@
 <template>
   <div>
-    <page-one/>
-   <page-two/>
-    <page-thre/>
-    <page4/>
-    <page5/>
-    <page6/>
-    <page7/>
-<!--    <div class="car-box">-->
-<!--      <header-one :data="{name:'您的结果总览',nameEn:'OVERVIEW OF YOUR RESULT',No:'NO：BG202304172012',date:'报告生成：2023-04-17'}" />-->
-<!--      <div class="car-content1">-->
-<!--        <div class="left">-->
-<!--          <div class="left-item" >菌群健康: <span>13分</span></div>-->
-<!--          <div class="left-item" >疾病管理: <span style="color: #254A96">18分</span></div>-->
-<!--          <div class="left-item" >营养评估: <span style="color: #254A96">19分</span></div>-->
-<!--        </div>-->
-<!--        <div class="right">-->
-<!--          <div class="right-titlt">健康总分</div>-->
-<!--          <div class="echart-box">-->
-<!--            <instrument-panel/>-->
-<!--          </div>-->
-<!--        </div>-->
+    <page-one />
+    <page-two />
+    <page-thre />
+    <page4 />
+    <page5 />
+    <page6 />
+    <page7 />
 
-<!--      </div>-->
+    <!--    <div class="car-box">-->
+    <!--      <header-one :data="{name:'您的结果总览',nameEn:'OVERVIEW OF YOUR RESULT',No:'NO：BG202304172012',date:'报告生成：2023-04-17'}" />-->
+    <!--      <div class="car-content1">-->
+    <!--        <div class="left">-->
+    <!--          <div class="left-item" >菌群健康: <span>13分</span></div>-->
+    <!--          <div class="left-item" >疾病管理: <span style="color: #254A96">18分</span></div>-->
+    <!--          <div class="left-item" >营养评估: <span style="color: #254A96">19分</span></div>-->
+    <!--        </div>-->
+    <!--        <div class="right">-->
+    <!--          <div class="right-titlt">健康总分</div>-->
+    <!--          <div class="echart-box">-->
+    <!--            <instrument-panel/>-->
+    <!--          </div>-->
+    <!--        </div>-->
 
-<!--      <header-tow :data="{name:'肠道菌群总体状况',nameEn:'OVERALL STATUS OF GUTMICROBIOTA'}"></header-tow>-->
-<!--      <div class="car-content2">-->
-<!--        <div class="car-content2-header">-->
-<!--          <div class="left">肠道预测年龄：</div>-->
-<!--          <div>64.72岁 </div>-->
-<!--          <div class="right">肠型：</div>-->
-<!--          <div>拟杆菌型</div>-->
-<!--        </div>-->
-<!--        <div class="content">-->
-<!--          <div class="left">-->
-<!--           <div>-->
-<!--             <div class="item">-->
-<!--               检测到菌种数量：<span>  1000</span> <span  class="btn btn-warning">注意</span>-->
-<!--             </div>-->
-<!--             <div class="item">-->
-<!--               检测到菌种数量：<span>  1000</span> <span class="btn btn-success">注意</span>-->
-<!--             </div>-->
-<!--           </div>-->
-<!--          </div>-->
-<!--          <div class="right"></div>-->
-<!--        </div>-->
+    <!--      </div>-->
 
-<!--      </div>-->
-<!--      <header-tow :data="{name:'肠道菌群类型及分散图',nameEn:'TYPE OF OUT MICROBIOTA  '}"></header-tow>-->
-<!--      <div class="car-content3">-->
-<!--        <production-beat />-->
+    <!--      <header-tow :data="{name:'肠道菌群总体状况',nameEn:'OVERALL STATUS OF GUTMICROBIOTA'}"></header-tow>-->
+    <!--      <div class="car-content2">-->
+    <!--        <div class="car-content2-header">-->
+    <!--          <div class="left">肠道预测年龄：</div>-->
+    <!--          <div>64.72岁 </div>-->
+    <!--          <div class="right">肠型：</div>-->
+    <!--          <div>拟杆菌型</div>-->
+    <!--        </div>-->
+    <!--        <div class="content">-->
+    <!--          <div class="left">-->
+    <!--           <div>-->
+    <!--             <div class="item">-->
+    <!--               检测到菌种数量：<span>  1000</span> <span  class="btn btn-warning">注意</span>-->
+    <!--             </div>-->
+    <!--             <div class="item">-->
+    <!--               检测到菌种数量：<span>  1000</span> <span class="btn btn-success">注意</span>-->
+    <!--             </div>-->
+    <!--           </div>-->
+    <!--          </div>-->
+    <!--          <div class="right"></div>-->
+    <!--        </div>-->
 
-<!--      </div>-->
+    <!--      </div>-->
+    <!--      <header-tow :data="{name:'肠道菌群类型及分散图',nameEn:'TYPE OF OUT MICROBIOTA  '}"></header-tow>-->
+    <!--      <div class="car-content3">-->
+    <!--        <production-beat />-->
 
-<!--    <div class="footer-box">-->
-<!--      <div>-->
-<!--        <img src="@/assets/images/car-pdf/footer-bg.svg" alt="">-->
-<!--      </div>-->
-<!--      <div class="footer-text">-->
-<!--        01-->
-<!--      </div>-->
+    <!--      </div>-->
 
-<!--    </div>-->
-<!--    </div>-->
+    <!--    <div class="footer-box">-->
+    <!--      <div>-->
+    <!--        <img src="@/assets/images/car-pdf/footer-bg.svg" alt="">-->
+    <!--      </div>-->
+    <!--      <div class="footer-text">-->
+    <!--        01-->
+    <!--      </div>-->
 
+    <!--    </div>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -85,60 +85,70 @@ export default {
   components: {
     Page7,
     Page6,
-    Page5, Page4, PageThre, PageTre, PageTwo, PageOne, ProductionBeat, InstrumentPanel, HeaderOne, HeaderTow},
+    Page5,
+    Page4,
+    PageThre,
+    PageTre,
+    PageTwo,
+    PageOne,
+    ProductionBeat,
+    InstrumentPanel,
+    HeaderOne,
+    HeaderTow,
+  },
   data() {
     return {
-      searchData:{},
+      searchData: {},
       form: {
-        name: '',
-        region: '',
-        date1: '',
-        date2: '',
+        name: "",
+        region: "",
+        date1: "",
+        date2: "",
         delivery: false,
         type: [],
-        resource: '',
-        desc: ''
+        resource: "",
+        desc: "",
       },
-      tableObj:{
-        list:[
-          {name:'1',code:'YG001'},
-          {name:'2',code:'YG002'},
-          {name:'3',code:'YG003'},
-          {name:'4',code:'YG004'},
-          {name:'5',code:'YG005'},
-        ]
+      tableObj: {
+        list: [
+          { name: "1", code: "YG001" },
+          { name: "2", code: "YG002" },
+          { name: "3", code: "YG003" },
+          { name: "4", code: "YG004" },
+          { name: "5", code: "YG005" },
+        ],
       },
       uploadBox: {
         show: false,
-        title: '修改用户',
+        title: "修改用户",
         data: {},
         rules: {
           code: [
             {
               required: true,
               message: "账号不能为空",
-              trigger: ["blur", "change"]
-            }
+              trigger: ["blur", "change"],
+            },
           ],
           name: [
             {
               required: true,
               message: "账号不能为空",
-              trigger: ["blur", "change"]
-            }
+              trigger: ["blur", "change"],
+            },
           ],
           password: [
             {
               required: true,
               message: "密码不能为空",
-              trigger: ["blur", "change"]
-            }
-          ]
-        }
+              trigger: ["blur", "change"],
+            },
+          ],
+        },
       },
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -258,6 +268,5 @@ export default {
 //  background: rgba(37, 74, 150, .2);
 //  color: #254A96 !important;
 //}
-
 </style>
 
