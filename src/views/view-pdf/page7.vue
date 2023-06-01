@@ -32,8 +32,25 @@
           <PieContainerChart :dataList="[20,30]"/>
         </div>
         <div class="right">
-          <div>您的主要菌群构成</div>
-          <div></div>
+          <img src="../../assets/images/bacteria-bg.png" class="bacteria-bg" alt="">
+          <img src="../../assets/images/bacteria-text-bg.png" class="bacteria-text-bg" alt="">
+        <div class="right-content">
+          <div class="right-header">您的主要菌群构成</div>
+          <div >
+            <div>
+              <span></span> <span>厚壁菌门</span> <span>59.6%</span>
+            </div>
+            <div>
+              <span></span> <span>厚壁菌门</span> <span>59.6%</span>
+            </div>
+            <div>
+              <span></span> <span>厚壁菌门</span> <span>59.6%</span>
+            </div>
+            <div>
+              <span></span> <span>厚壁菌门</span> <span>59.6%</span>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -179,18 +196,37 @@ export default {
 .content2-box{
   display: flex;
   width: 100%;
-  height: 200px;
+  height: 250px;
+  align-items: center;
   .left{
     width: 50%;
     height: 100%;
-    background: #e1e4ea;
     border-radius: 6px 0 0 6px;
   }
   .right{
+    position: relative;
     width: 50%;
     height: 100%;
     background: #e1e4ea;
     border-radius: 0 6px 6px 0;
+    .right-content{
+      text-align: right;
+    }
+  .bacteria-bg{
+    position: absolute;
+    top: 53px;
+    left: 50px;
+  }
+    .bacteria-text-bg{
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+    }
+    .right-header{
+      color: #6F7F9F;
+      font-size: 25px;
+    }
+
   }
 }
 
